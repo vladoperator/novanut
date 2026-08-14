@@ -1,21 +1,40 @@
-const companyLinks = ['About Us', 'Our Process', 'Sustainability', 'Careers'];
-const productLinks = ['Walnut Kernels', 'Walnut Meal', 'Packaging', 'Catalog'];
-const supportLinks = ['Quality & Food Safety', 'Certifications', 'FAQ', 'Contact'];
-
-const certifications = [
-  { name: 'HACCP', label: 'HACCP' },
-  { name: 'ISO 22000', label: 'ISO\n22000' },
-  { name: 'BRC', label: 'BRC' },
-];
-
-const socialLinks = [
-  { icon: 'in', label: 'LinkedIn', href: '#' },
-  { icon: 'f', label: 'Facebook', href: '#' },
-  { icon: '📷', label: 'Instagram', href: '#' },
-  { icon: '▶', label: 'YouTube', href: '#' },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function Footer() {
+  const { t } = useTranslation();
+
+  const companyLinks = [
+    t('footer.about_us'),
+    t('footer.our_process'),
+    t('footer.sustainability'),
+    t('footer.careers'),
+  ];
+  const productLinks = [
+    t('footer.walnut_kernels'),
+    t('footer.walnut_meal'),
+    t('footer.packaging'),
+    t('footer.catalog'),
+  ];
+  const supportLinks = [
+    t('footer.food_safety'),
+    t('footer.certifications_link'),
+    t('footer.faq'),
+    t('footer.contact'),
+  ];
+
+  const certifications = [
+    { name: 'HACCP', label: 'HACCP' },
+    { name: 'ISO 22000', label: 'ISO\n22000' },
+    { name: 'BRC', label: 'BRC' },
+  ];
+
+  const socialLinks = [
+    { icon: 'in', label: 'LinkedIn', href: '#' },
+    { icon: 'f', label: 'Facebook', href: '#' },
+    { icon: '📷', label: 'Instagram', href: '#' },
+    { icon: '▶', label: 'YouTube', href: '#' },
+  ];
+
   return (
     <footer className="footer" role="contentinfo">
       <div className="container">
@@ -33,31 +52,31 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="footer-col-title">Company</h4>
+            <h4 className="footer-col-title">{t('footer.col_company')}</h4>
             {companyLinks.map((link) => (
-              <a key={link} href="#" className="footer-link">{link}</a>
+              <a key={link} href="#about" className="footer-link">{link}</a>
             ))}
           </div>
 
           {/* Products */}
           <div>
-            <h4 className="footer-col-title">Products</h4>
+            <h4 className="footer-col-title">{t('footer.col_products')}</h4>
             {productLinks.map((link) => (
-              <a key={link} href="#" className="footer-link">{link}</a>
+              <a key={link} href="#products" className="footer-link">{link}</a>
             ))}
           </div>
 
           {/* Support */}
           <div>
-            <h4 className="footer-col-title">Support</h4>
+            <h4 className="footer-col-title">{t('footer.col_support')}</h4>
             {supportLinks.map((link) => (
-              <a key={link} href="#" className="footer-link">{link}</a>
+              <a key={link} href="#contact" className="footer-link">{link}</a>
             ))}
           </div>
 
           {/* Certifications & Social */}
           <div>
-            <h4 className="footer-col-title">Certifications</h4>
+            <h4 className="footer-col-title">{t('footer.col_certifications')}</h4>
             <div className="footer-certs">
               {certifications.map((cert) => (
                 <div key={cert.name} className="footer-cert-badge" aria-label={cert.name}>
@@ -65,7 +84,7 @@ export default function Footer() {
                 </div>
               ))}
             </div>
-            <h4 className="footer-col-title" style={{ marginTop: '1.5rem' }}>Follow Us</h4>
+            <h4 className="footer-col-title" style={{ marginTop: '1.5rem' }}>{t('footer.col_follow')}</h4>
             <div className="footer-social">
               {socialLinks.map((s) => (
                 <a key={s.label} href={s.href} className="footer-social-link" aria-label={s.label}>
@@ -77,7 +96,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <p>© {new Date().getFullYear()} NovaNut Walnut Kernels Export. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {t('footer.rights')}</p>
         </div>
       </div>
     </footer>

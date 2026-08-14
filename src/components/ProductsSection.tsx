@@ -1,45 +1,49 @@
-const products = [
-  {
-    emoji: '🥜',
-    name: 'Light Halves',
-    desc: 'High quality, light color, great taste.',
-  },
-  {
-    emoji: '✨',
-    name: 'Extra Light',
-    desc: 'Premium selection for the most demanding markets.',
-  },
-  {
-    emoji: '🔶',
-    name: 'Quarters & Pieces',
-    desc: 'Perfect for industrial use and food manufacturing.',
-  },
-  {
-    emoji: '🫘',
-    name: 'Walnut Meal',
-    desc: 'Finely ground walnut for various food applications.',
-  },
-  {
-    emoji: '🥣',
-    name: 'Mixed Kernels',
-    desc: 'A perfect blend of halves and pieces for your needs.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function ProductsSection() {
+  const { t } = useTranslation();
+
+  const products = [
+    {
+      emoji: '🥜',
+      name: t('products.p1_name'),
+      desc: t('products.p1_desc'),
+    },
+    {
+      emoji: '✨',
+      name: t('products.p2_name'),
+      desc: t('products.p2_desc'),
+    },
+    {
+      emoji: '🔶',
+      name: t('products.p3_name'),
+      desc: t('products.p3_desc'),
+    },
+    {
+      emoji: '🫘',
+      name: t('products.p4_name'),
+      desc: t('products.p4_desc'),
+    },
+    {
+      emoji: '🥣',
+      name: t('products.p5_name'),
+      desc: t('products.p5_desc'),
+    },
+  ];
+
   return (
     <section className="products" id="products" aria-labelledby="products-title">
       <div className="container">
         <div className="products-header">
           <div>
-            <p className="label-upper products-label">Our Products</p>
+            <p className="label-upper products-label">{t('products.tag')}</p>
             <h2 id="products-title" className="heading-section products-title">
-              Premium Walnut Kernels 🌰<br />
-              <em>For Every Market</em>
+              {t('products.title_main')}<br />
+              <em>{t('products.title_sub')}</em>
             </h2>
           </div>
           <a href="#products" className="btn btn-outline btn-arrow">
-            View All Products
+            {t('products.view_all')}
           </a>
         </div>
 

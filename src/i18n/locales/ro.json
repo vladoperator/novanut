@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Acasă",
+    "story": "Poveste",
+    "quality": "Calitate",
+    "sustainability": "Sustenabilitate",
+    "about": "Despre Noi",
+    "products": "Produse",
+    "contact": "Contact",
+    "quote": "Cere o Ofertă",
+    "language": "Limbă"
+  },
+  "hero": {
+    "badge_tag": "Calitate Premium",
+    "title_line1": "NovaNut",
+    "title_line2": "Miez de Nucă",
+    "title_italic": "Din Natură. Pentru Lume.",
+    "subtitle": "Exportăm miez de nucă de calitate superioară, recoltat din cele mai bune origini către piețele internaționale. Natural. Delicios. De încredere.",
+    "explore_btn": "Descoperă Produsele",
+    "watch_story": "Povestea Noastră",
+    "badge_percent": "100%",
+    "badge_text": "Natural\nPremium\nMiez de Nucă"
+  },
+  "features": {
+    "f1_title": "100% Natural",
+    "f1_desc": "Miez de nucă pur, fără aditivi sau conservanți.",
+    "f2_title": "Calitate Superioară",
+    "f2_desc": "Selectat cu grijă și procesat la cele mai înalte standarde.",
+    "f3_title": "Export Global",
+    "f3_desc": "Livrăm nuci premium pe piețe din întreaga lume.",
+    "f4_title": "Partener de Încredere",
+    "f4_desc": "Parteneriate durabile bazate pe seriozitate și respect.",
+    "f5_title": "Siguranță Alimentară",
+    "f5_desc": "Control riguros al calității și management strict al siguranței.",
+    "f6_title": "Ambalare Personalizată",
+    "f6_desc": "Soluții flexibile de ambalare adaptate nevoilor dumneavoastră."
+  },
+  "story": {
+    "step1_tag": "Pasul 1: Calitate",
+    "step1_title": "Nuca Perfectă,\nDirect De La Sursă.",
+    "step1_desc": "Fiecare nucă NovaNut își începe călătoria în cele mai alese livezi. Selectăm doar nuci de cea mai înaltă clasă, protejate în coaja lor naturală, garantând prospețime maximă și valoare nutritivă înainte de a ajunge în unitățile noastre.",
+    
+    "step2_tag": "Pasul 2: Sustenabilitate",
+    "step2_title": "Practici Etice.\nZero Deșeuri.",
+    "step2_desc": "Procesul nostru de procesare este complet sustenabil. Cojile sunt reciclate integral pentru energie din biomasă, iar apa este recirculată. Credem că o calitate premium trebuie să protejeze planeta.",
+    
+    "step3_tag": "Despre NovaNut",
+    "step3_title": "Calitate pe Care o Simți.\nParteneriate de Încredere.",
+    "step3_desc": "Cu ani de experiență în cultivarea, procesarea și exportul de nuci, livrăm cel mai fin miez de nucă partenerilor noștri internaționali.",
+    "bullet1": "Materie primă atent selecționată",
+    "bullet2": "Procesare avansată și control strict al calității",
+    "bullet3": "Practici sustenabile și etice",
+    "bullet4": "Logistică sigură și livrare punctuală",
+    "contact_btn": "Contactează-ne",
+    
+    "indicator_step1": "Pasul 1: Calitate",
+    "indicator_step2": "Pasul 2: Sustenabilitate",
+    "indicator_step3": "Despre NovaNut"
+  },
+  "stats": {
+    "stat1_number": "5000+ t",
+    "stat1_label": "Tone Exportate Anual",
+    "stat2_number": "30+",
+    "stat2_label": "Țări Deservite",
+    "stat3_number": "100%",
+    "stat3_label": "Calitate Garantată",
+    "stat4_number": "50+",
+    "stat4_label": "Parteneri Mulțumiți"
+  },
+  "products": {
+    "tag": "Produsele Noastre",
+    "title_main": "Miez de Nucă Premium 🌰",
+    "title_sub": "Pentru Orice Piață",
+    "view_all": "Vezi Toate Produsele",
+    "p1_name": "Jumătăți Extra/Light",
+    "p1_desc": "Calitate superioară, culoare deschisă, gust desăvârșit.",
+    "p2_name": "Extra Light Premium",
+    "p2_desc": "Selecție de top pentru cele mai exigente cerințe din piață.",
+    "p3_name": "Sferturi și Bucăți",
+    "p3_desc": "Ideal pentru patiserie, ciocolaterie și industria alimentară.",
+    "p4_name": "Făină de Nucă",
+    "p4_desc": "Măcinată fin pentru diverse aplicații culinare și industriale.",
+    "p5_name": "Mix de Miez",
+    "p5_desc": "Amestec optim de jumătăți și bucăți adaptat nevoilor tale."
+  },
+  "cta": {
+    "title": "Să Creștem Împreună",
+    "subtitle": "Parteneriate Puternice. Succes Durabil.",
+    "desc": "Suntem pregătiți să construim parteneriate solide și de lungă durată la nivel global.",
+    "btn": "Cere o Ofertă"
+  },
+  "footer": {
+    "col_company": "Companie",
+    "col_products": "Produse",
+    "col_support": "Suport",
+    "col_certifications": "Certificări",
+    "col_follow": "Urmărește-ne",
+    "about_us": "Despre Noi",
+    "our_process": "Procesul Nostru",
+    "sustainability": "Sustenabilitate",
+    "careers": "Cariere",
+    "walnut_kernels": "Miez de Nucă",
+    "walnut_meal": "Făină de Nucă",
+    "packaging": "Ambalare",
+    "catalog": "Catalog",
+    "food_safety": "Calitate & Siguranță",
+    "certifications_link": "Certificări",
+    "faq": "Întrebări Frecvente",
+    "contact": "Contact",
+    "rights": "NovaNut Export Miez de Nucă. Toate drepturile rezervate."
+  }
+}

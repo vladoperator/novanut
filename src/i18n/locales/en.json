@@ -1,0 +1,112 @@
+{
+  "nav": {
+    "home": "Home",
+    "story": "Story",
+    "quality": "Quality",
+    "sustainability": "Sustainability",
+    "about": "About Us",
+    "products": "Products",
+    "contact": "Contact",
+    "quote": "Request a Quote",
+    "language": "Language"
+  },
+  "hero": {
+    "badge_tag": "Premium Quality",
+    "title_line1": "NovaNut",
+    "title_line2": "Walnut Kernels",
+    "title_italic": "From Nature. To The World.",
+    "subtitle": "We export premium quality walnut kernels sourced from the best origins to the world. Natural. Delicious. Trusted.",
+    "explore_btn": "Explore Our Products",
+    "watch_story": "Watch Our Story",
+    "badge_percent": "100%",
+    "badge_text": "Natural\nPremium\nWalnut Kernels"
+  },
+  "features": {
+    "f1_title": "100% Natural",
+    "f1_desc": "Pure walnut kernels with no additives or preservatives.",
+    "f2_title": "Premium Quality",
+    "f2_desc": "Carefully selected and processed to ensure the highest standards.",
+    "f3_title": "Global Export",
+    "f3_desc": "Supplying premium walnuts to markets worldwide.",
+    "f4_title": "Trusted Partner",
+    "f4_desc": "Long-term partnerships built on trust and reliability.",
+    "f5_title": "Food Safety",
+    "f5_desc": "Strict quality control and food safety management.",
+    "f6_title": "Custom Packaging",
+    "f6_desc": "Tailored packaging solutions to meet your specific needs."
+  },
+  "story": {
+    "step1_tag": "Step 1: Quality",
+    "step1_title": "The Perfect Nut,\nStraight From The Source.",
+    "step1_desc": "Every NovaNut begins in the world's finest orchards. We select only the highest-grade walnuts, still protected in their natural shells, ensuring maximum freshness and nutritional value before they even reach our facilities.",
+    
+    "step2_tag": "Step 2: Sustainability",
+    "step2_title": "Ethical Practices.\nZero Waste.",
+    "step2_desc": "Our extraction process is fully sustainable. The shells are completely recycled for biomass energy, and every drop of water is reclaimed. We believe premium quality should not cost the earth.",
+    
+    "step3_tag": "About NovaNut",
+    "step3_title": "Quality You Can Taste.\nPartnerships You Can Trust.",
+    "step3_desc": "With years of experience in walnut cultivation, processing and export, we deliver the finest walnut kernels to our global partners.",
+    "bullet1": "Carefully selected raw materials",
+    "bullet2": "Advanced processing & strict quality control",
+    "bullet3": "Sustainable & ethical practices",
+    "bullet4": "Reliable logistics & timely delivery",
+    "contact_btn": "Contact Us",
+    
+    "indicator_step1": "Step 1: Quality",
+    "indicator_step2": "Step 2: Sustainability",
+    "indicator_step3": "About NovaNut"
+  },
+  "stats": {
+    "stat1_number": "5000+",
+    "stat1_label": "Tons Exported Annually",
+    "stat2_number": "30+",
+    "stat2_label": "Countries Served",
+    "stat3_number": "100%",
+    "stat3_label": "Quality Guaranteed",
+    "stat4_number": "50+",
+    "stat4_label": "Satisfied Partners"
+  },
+  "products": {
+    "tag": "Our Products",
+    "title_main": "Premium Walnut Kernels 🌰",
+    "title_sub": "For Every Market",
+    "view_all": "View All Products",
+    "p1_name": "Light Halves",
+    "p1_desc": "High quality, light color, great taste.",
+    "p2_name": "Extra Light",
+    "p2_desc": "Premium selection for the most demanding markets.",
+    "p3_name": "Quarters & Pieces",
+    "p3_desc": "Perfect for industrial use and food manufacturing.",
+    "p4_name": "Walnut Meal",
+    "p4_desc": "Finely ground walnut for various food applications.",
+    "p5_name": "Mixed Kernels",
+    "p5_desc": "A perfect blend of halves and pieces for your needs."
+  },
+  "cta": {
+    "title": "Let's Grow Together",
+    "subtitle": "Strong Partnerships. Lasting Success.",
+    "desc": "We are ready to build strong and long-term partnerships worldwide.",
+    "btn": "Request a Quote"
+  },
+  "footer": {
+    "col_company": "Company",
+    "col_products": "Products",
+    "col_support": "Support",
+    "col_certifications": "Certifications",
+    "col_follow": "Follow Us",
+    "about_us": "About Us",
+    "our_process": "Our Process",
+    "sustainability": "Sustainability",
+    "careers": "Careers",
+    "walnut_kernels": "Walnut Kernels",
+    "walnut_meal": "Walnut Meal",
+    "packaging": "Packaging",
+    "catalog": "Catalog",
+    "food_safety": "Quality & Food Safety",
+    "certifications_link": "Certifications",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "rights": "NovaNut Walnut Kernels Export. All rights reserved."
+  }
+}

@@ -1,37 +1,41 @@
-const features = [
-  {
-    icon: '🌿',
-    title: '100% Natural',
-    desc: 'Pure walnut kernels with no additives or preservatives.',
-  },
-  {
-    icon: '⭐',
-    title: 'Premium Quality',
-    desc: 'Carefully selected and processed to ensure the highest standards.',
-  },
-  {
-    icon: '🌍',
-    title: 'Global Export',
-    desc: 'Supplying premium walnuts to markets worldwide.',
-  },
-  {
-    icon: '🤝',
-    title: 'Trusted Partner',
-    desc: 'Long-term partnerships built on trust and reliability.',
-  },
-  {
-    icon: '🛡️',
-    title: 'Food Safety',
-    desc: 'Strict quality control and food safety management.',
-  },
-  {
-    icon: '📦',
-    title: 'Custom Packaging',
-    desc: 'Tailored packaging solutions to meet your specific needs.',
-  },
-];
+import { useTranslation } from 'react-i18next';
 
 export default function FeaturesBar() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: '🌿',
+      title: t('features.f1_title'),
+      desc: t('features.f1_desc'),
+    },
+    {
+      icon: '⭐',
+      title: t('features.f2_title'),
+      desc: t('features.f2_desc'),
+    },
+    {
+      icon: '🌍',
+      title: t('features.f3_title'),
+      desc: t('features.f3_desc'),
+    },
+    {
+      icon: '🤝',
+      title: t('features.f4_title'),
+      desc: t('features.f4_desc'),
+    },
+    {
+      icon: '🛡️',
+      title: t('features.f5_title'),
+      desc: t('features.f5_desc'),
+    },
+    {
+      icon: '📦',
+      title: t('features.f6_title'),
+      desc: t('features.f6_desc'),
+    },
+  ];
+
   return (
     <section className="features-bar" aria-label="Key features">
       <div className="container">

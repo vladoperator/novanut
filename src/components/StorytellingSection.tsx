@@ -1,14 +1,19 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { useScrollContext } from './SmoothScrollProvider';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function StorytellingSection() {
+  const { t } = useTranslation();
+  const { lenisRef } = useScrollContext();
   const sectionRef = useRef<HTMLElement>(null);
   const qRef = useRef<HTMLDivElement>(null);
   const sRef = useRef<HTMLDivElement>(null);
   const aRef = useRef<HTMLDivElement>(null);
+  const [activeStep, setActiveStep] = useState<number>(0);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -23,6 +28,16 @@ export default function StorytellingSection() {
           start: 'top top',
           end: 'bottom bottom',
           scrub: true,
+          onUpdate: (self) => {
+            const p = self.progress;
+            if (p < 0.33) {
+              setActiveStep(0);
+            } else if (p < 0.66) {
+              setActiveStep(1);
+            } else {
+              setActiveStep(2);
+            }
+          },
         },
       });
 
@@ -44,65 +59,115 @@ export default function StorytellingSection() {
     return () => ctx.revert();
   }, []);
 
+  const scrollToStep = (stepIndex: number) => {
+    if (!sectionRef.current) return;
+    const rect = sectionRef.current.getBoundingClientRect();
+    const currentScroll = window.scrollY;
+    const sectionTop = currentScroll + rect.top;
+    const sectionHeight = sectionRef.current.offsetHeight - window.innerHeight;
+
+    // Progress target: 0.05 for step 0, 0.45 for step 1, 0.85 for step 2
+    const targetFractions = [0.05, 0.48, 0.85];
+    const targetScroll = sectionTop + sectionHeight * targetFractions[stepIndex];
+
+    if (lenisRef?.current) {
+      lenisRef.current.scrollTo(targetScroll, { duration: 1.2 });
+    } else {
+      window.scrollTo({ top: targetScroll, behavior: 'smooth' });
+    }
+  };
+
   const bulletPoints = [
-    'Carefully selected raw materials',
-    'Advanced processing & strict quality control',
-    'Sustainable & ethical practices',
-    'Reliable logistics & timely delivery',
+    t('story.bullet1'),
+    t('story.bullet2'),
+    t('story.bullet3'),
+    t('story.bullet4'),
+  ];
+
+  const steps = [
+    { index: 0, name: t('story.indicator_step1'), short: '01' },
+    { index: 1, name: t('story.indicator_step2'), short: '02' },
+    { index: 2, name: t('story.indicator_step3'), short: '03' },
   ];
 
   return (
-    <section ref={sectionRef} className="storytelling-section">
+    <section ref={sectionRef} className="storytelling-section" id="story">
       <div className="storytelling-sticky">
         <div className="container storytelling-layout">
-          <div className="storytelling-content">
-            
-            {/* QUALITY */}
-            <div ref={qRef} id="quality" className="story-block">
-              <p className="label-upper about-label">Step 1: Quality</p>
-              <h2 className="heading-section about-title">
-                The Perfect Nut,<br />Straight From The Source.
-              </h2>
-              <p className="about-desc">
-                Every NovaNut begins in the world's finest orchards. We select only the highest-grade walnuts, still protected in their natural shells, ensuring maximum freshness and nutritional value before they even reach our facilities.
-              </p>
-            </div>
+          
+          <div className="story-indicators-wrapper">
+            {/* Step Navigation Dots on the Left */}
+            <nav className="story-dots-nav" aria-label="Story steps navigation">
+              {steps.map((s) => {
+                const isActive = activeStep === s.index;
+                return (
+                  <button
+                    key={s.index}
+                    type="button"
+                    onClick={() => scrollToStep(s.index)}
+                    className={`story-dot-btn ${isActive ? 'active' : ''}`}
+                    aria-label={`Go to ${s.name}`}
+                    aria-current={isActive ? 'step' : undefined}
+                  >
+                    <div className="story-dot-pill" />
+                    <span className="story-dot-tooltip">
+                      {s.name}
+                    </span>
+                  </button>
+                );
+              })}
+            </nav>
 
-            {/* SUSTAINABILITY */}
-            <div ref={sRef} id="sustainability" className="story-block">
-              <p className="label-upper about-label">Step 2: Sustainability</p>
-              <h2 className="heading-section about-title">
-                Ethical Practices.<br />Zero Waste.
-              </h2>
-              <p className="about-desc">
-                Our extraction process is fully sustainable. The shells are completely recycled for biomass energy, and every drop of water is reclaimed. We believe premium quality should not cost the earth.
-              </p>
-            </div>
+            {/* Main Content Blocks */}
+            <div className="storytelling-content">
+              
+              {/* QUALITY */}
+              <div ref={qRef} id="quality" className="story-block">
+                <p className="label-upper about-label">{t('story.step1_tag')}</p>
+                <h2 className="heading-section about-title whitespace-pre-line">
+                  {t('story.step1_title')}
+                </h2>
+                <p className="about-desc">
+                  {t('story.step1_desc')}
+                </p>
+              </div>
 
-            {/* ABOUT US */}
-            <div ref={aRef} id="about" className="story-block">
-              <p className="label-upper about-label">About NovaNut</p>
-              <h2 className="heading-section about-title">
-                Quality You Can Taste.<br />
-                Partnerships You Can Trust.
-              </h2>
-              <p className="about-desc">
-                With years of experience in walnut cultivation, processing and export, we deliver the finest walnut kernels to our global partners.
-              </p>
-              <ul className="about-list">
-                {bulletPoints.map((point, i) => (
-                  <li key={i} className="about-list-item">
-                    <span className="check" aria-hidden="true">✓</span>
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
-              <a href="#contact" className="btn btn-outline btn-arrow">
-                Contact Us
-              </a>
-            </div>
+              {/* SUSTAINABILITY */}
+              <div ref={sRef} id="sustainability" className="story-block">
+                <p className="label-upper about-label">{t('story.step2_tag')}</p>
+                <h2 className="heading-section about-title whitespace-pre-line">
+                  {t('story.step2_title')}
+                </h2>
+                <p className="about-desc">
+                  {t('story.step2_desc')}
+                </p>
+              </div>
 
+              {/* ABOUT US */}
+              <div ref={aRef} id="about" className="story-block">
+                <p className="label-upper about-label">{t('story.step3_tag')}</p>
+                <h2 className="heading-section about-title whitespace-pre-line">
+                  {t('story.step3_title')}
+                </h2>
+                <p className="about-desc">
+                  {t('story.step3_desc')}
+                </p>
+                <ul className="about-list">
+                  {bulletPoints.map((point, i) => (
+                    <li key={i} className="about-list-item">
+                      <span className="check" aria-hidden="true">✓</span>
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+                <a href="#contact" className="btn btn-outline btn-arrow">
+                  {t('story.contact_btn')}
+                </a>
+              </div>
+
+            </div>
           </div>
+
           {/* The right side is intentionally left empty for the 3D Walnut */}
         </div>
       </div>
