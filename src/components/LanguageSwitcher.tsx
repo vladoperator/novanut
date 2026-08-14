@@ -22,7 +22,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative inline-flex items-center gap-1.5 sm:gap-2 rounded-[10px] p-1.5 sm:p-2 transition-all duration-300",
+        "relative inline-flex items-center gap-1.5 sm:gap-2 rounded-[4px] p-1.5 sm:p-2 transition-all duration-300",
         // Sleek frosted glass container with crisp edges
         "bg-white/65 dark:bg-black/30 backdrop-blur-xl saturate-180",
         "border border-[#1a3a2a]/15 dark:border-white/20",
@@ -42,7 +42,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             onClick={() => handleSelectLanguage(l.code)}
             aria-pressed={active}
             className={cn(
-              "group relative z-10 flex cursor-pointer items-center justify-center gap-2 rounded-[7px] px-4.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider transition-all duration-300 select-none",
+              "group relative z-10 flex cursor-pointer items-center justify-center gap-2 rounded-[3px] px-4.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider transition-all duration-300 select-none",
               active
                 ? "text-white"
                 : "text-[#3c4a3e] hover:text-[#1a3a2a] hover:bg-black/[0.05] active:scale-95"
@@ -52,7 +52,7 @@ export function LanguageSwitcher({ className }: { className?: string }) {
               <motion.div
                 layoutId="active-language-indicator"
                 className={cn(
-                  "absolute inset-0 -z-10 rounded-[7px]",
+                  "absolute inset-0 -z-10 rounded-[3px]",
                   // Deep glossy emerald tab with top specular edge
                   "bg-gradient-to-b from-[#24543c] via-[#1a3a2a] to-[#12281d]",
                   "border border-white/25",

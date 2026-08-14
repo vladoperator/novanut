@@ -74,7 +74,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
           </div>
 
           {/* Hero Header */}
-          <div className="products-hero-card mb-16 p-8 sm:p-12 rounded-2xl bg-gradient-to-br from-[#1a3a2a] via-[#153123] to-[#0f2419] text-white shadow-xl relative overflow-hidden">
+          <div className="products-hero-card mb-16 p-8 sm:p-12 rounded-[4px] bg-gradient-to-br from-[#1a3a2a] via-[#153123] to-[#0f2419] text-white shadow-xl relative overflow-hidden">
             <div className="absolute right-0 top-0 bottom-0 w-1/2 opacity-10 pointer-events-none bg-[radial-gradient(#c8a960_1px,transparent_1px)] [background-size:16px_16px]" />
             <div className="max-w-3xl relative z-10">
               <span className="inline-block text-xs font-bold uppercase tracking-widest text-[#c8a960] mb-3">
@@ -108,7 +108,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
               {HEALTH_BENEFITS.map((benefit, i) => (
                 <div
                   key={i}
-                  className="benefit-card p-4 sm:p-5 rounded-xl bg-white/70 backdrop-blur-md border border-[#1a3a2a]/10 hover:border-[#c8a960] hover:shadow-md transition-all duration-200 flex items-start gap-3.5 group"
+                  className="benefit-card p-4 sm:p-5 rounded-[4px] bg-white/70 backdrop-blur-md border border-[#1a3a2a]/10 hover:border-[#c8a960] hover:shadow-md transition-all duration-200 flex items-start gap-3.5 group"
                 >
                   <span className="benefit-icon text-2xl flex-shrink-0 group-hover:scale-110 transition-transform">
                     {benefit.icon}
@@ -132,7 +132,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
                     key={cat.id}
                     type="button"
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-4 sm:px-5 py-2.5 rounded-lg text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 cursor-pointer ${
+                    className={`px-4 sm:px-5 py-2.5 rounded-[4px] text-xs sm:text-sm font-bold tracking-wider transition-all duration-200 cursor-pointer ${
                       active
                         ? 'bg-[#1a3a2a] text-white shadow-md'
                         : 'bg-white/70 text-[#3d4a3e] border border-[#1a3a2a]/10 hover:bg-white hover:border-[#1a3a2a]/20'
@@ -150,7 +150,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
                 return (
                   <div
                     key={product.id}
-                    className="product-catalog-card group bg-white rounded-xl overflow-hidden border border-[#1a3a2a]/10 hover:border-[#c8a960]/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+                    className="product-catalog-card group bg-white rounded-[4px] overflow-hidden border border-[#1a3a2a]/10 hover:border-[#c8a960]/60 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
                   >
                     <div>
                       {/* Image Preview Container */}
@@ -162,11 +162,11 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
                           loading="lazy"
                         />
                         <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                          <span className="bg-white/90 text-[#1a3a2a] text-xs font-bold px-3 py-1.5 rounded-md shadow-sm">
+                          <span className="bg-white/90 text-[#1a3a2a] text-xs font-bold px-3 py-1.5 rounded-[4px] shadow-sm">
                             🔍 {t('products_catalog.view_image') || 'Mărește'}
                           </span>
                         </div>
-                        <span className="absolute top-3 left-3 bg-[#1a3a2a]/85 backdrop-blur-md text-[#f0ead8] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded">
+                        <span className="absolute top-3 left-3 bg-[#1a3a2a]/85 backdrop-blur-md text-[#f0ead8] text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-[4px]">
                           {product.category}
                         </span>
                       </div>
@@ -221,7 +221,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
           </section>
 
           {/* Inspirational Quote Banner */}
-          <div className="quote-banner-card p-8 sm:p-12 rounded-2xl bg-[#f0ead8] border border-[#c8a960]/30 text-center text-[#1a3a2a] mb-12 shadow-sm">
+          <div className="quote-banner-card p-8 sm:p-12 rounded-[4px] bg-[#f0ead8] border border-[#c8a960]/30 text-center text-[#1a3a2a] mb-12 shadow-sm">
             <span className="text-3xl block mb-2 opacity-60">🌰</span>
             <blockquote className="font-serif italic text-lg sm:text-2xl max-w-3xl mx-auto leading-relaxed text-[#1a3a2a]">
               "{t('products_catalog.quote_banner')}"
@@ -237,7 +237,7 @@ export default function ProductsPage({ onNavigate }: ProductsPageProps) {
           onClick={() => setLightboxImage(null)}
         >
           <div
-            className="relative max-w-4xl w-full max-h-[90vh] bg-[#1a3a2a] p-4 rounded-xl overflow-hidden shadow-2xl flex flex-col items-center"
+            className="relative max-w-4xl w-full max-h-[90vh] bg-[#1a3a2a] p-4 rounded-[4px] overflow-hidden shadow-2xl flex flex-col items-center"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-full flex justify-between items-center pb-3 text-white">
