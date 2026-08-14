@@ -3,9 +3,9 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const LANGS = [
-  { code: "ro", flag: "🇷🇴" },
-  { code: "en", flag: "🇬🇧" },
-  { code: "ru", flag: "🇷🇺" },
+  { code: "ro", flag: "🇷🇴", label: "RO" },
+  { code: "en", flag: "🇬🇧", label: "EN" },
+  { code: "ru", flag: "🇷🇺", label: "RU" },
 ] as const;
 
 export function LanguageSwitcher({ className }: { className?: string }) {
@@ -15,11 +15,16 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   return (
     <div
       className={cn(
-        "relative inline-flex items-center gap-1 rounded-full border border-primary/10 bg-background/50 p-1.5 shadow-sm backdrop-blur-md transition-all hover:bg-background/80 hover:shadow-md",
+        "relative inline-flex items-center gap-1.5 rounded-full p-1.5 transition-all duration-300",
+        // Liquid glass container
+        "bg-white/45 dark:bg-black/20 backdrop-blur-xl saturate-180",
+        "border border-white/70 dark:border-white/20",
+        "shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.9),0_6px_20px_-2px_rgba(26,58,42,0.12),0_2px_6px_rgba(0,0,0,0.04)]",
+        "hover:border-white/90 hover:bg-white/55 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.95),0_8px_24px_-2px_rgba(26,58,42,0.16)]",
         className
       )}
       role="group"
-      aria-label="Language"
+      aria-label="Language selector"
     >
       {LANGS.map((l) => {
         const active = current === l.code;
@@ -30,32 +35,45 @@ export function LanguageSwitcher({ className }: { className?: string }) {
             onClick={() => i18n.changeLanguage(l.code)}
             aria-pressed={active}
             className={cn(
-              "relative z-10 flex cursor-pointer items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-bold uppercase tracking-widest transition-colors duration-300",
+              "group relative z-10 flex cursor-pointer items-center justify-center gap-2 rounded-full px-4 py-2 text-xs sm:text-[13px] font-bold tracking-wider transition-all duration-300 select-none",
               active
-                ? "text-primary-foreground"
-                : "text-muted-foreground hover:text-foreground hover:bg-black/5 dark:hover:bg-white/5"
+                ? "text-white"
+                : "text-[#4a554a] hover:text-[#1a3a2a] hover:bg-white/35 active:scale-95"
             )}
           >
             {active && (
               <motion.div
-                layoutId="active-lang-pill"
-                className="absolute inset-0 -z-10 rounded-full bg-primary shadow-sm"
+                layoutId="active-liquid-pill"
+                className={cn(
+                  "absolute inset-0 -z-10 rounded-full",
+                  // Deep glossy liquid emerald pill with top specular reflection
+                  "bg-gradient-to-b from-[#24523a] via-[#1a3a2a] to-[#12281d]",
+                  "border border-white/25",
+                  "shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_4px_14px_rgba(18,40,29,0.35),0_1px_3px_rgba(0,0,0,0.15)]"
+                )}
                 transition={{
                   type: "spring",
-                  stiffness: 400,
-                  damping: 30,
+                  stiffness: 420,
+                  damping: 32,
                   mass: 0.8,
                 }}
               />
             )}
-            <span aria-hidden className="text-base leading-none">
+            <span
+              aria-hidden
+              className="text-base leading-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] transition-transform duration-200 group-hover:scale-110"
+            >
               {l.flag}
             </span>
-            <span className={cn(
-              "relative z-10",
-              active ? "text-primary-foreground" : ""
-            )}>
-              {l.code}
+            <span
+              className={cn(
+                "relative z-10 font-bold uppercase transition-colors duration-200",
+                active
+                  ? "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
+                  : "text-[#3d4a3e]"
+              )}
+            >
+              {l.label}
             </span>
           </button>
         );
