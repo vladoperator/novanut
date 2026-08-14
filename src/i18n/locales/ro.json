@@ -44,18 +44,25 @@
     "step2_title": "Practici Etice.\nZero Deșeuri.",
     "step2_desc": "Procesul nostru de procesare este complet sustenabil. Cojile sunt reciclate integral pentru energie din biomasă, iar apa este recirculată. Credem că o calitate premium trebuie să protejeze planeta.",
     
-    "step3_tag": "Despre NovaNut",
-    "step3_title": "Calitate pe Care o Simți.\nParteneriate de Încredere.",
-    "step3_desc": "Cu ani de experiență în cultivarea, procesarea și exportul de nuci, livrăm cel mai fin miez de nucă partenerilor noștri internaționali.",
-    "bullet1": "Materie primă atent selecționată",
-    "bullet2": "Procesare avansată și control strict al calității",
-    "bullet3": "Practici sustenabile și etice",
-    "bullet4": "Logistică sigură și livrare punctuală",
+    "step3_tag": "Despre Noi",
+    "step3_title": "Nova Nut SRL — Calitate & Tradiție",
+    "step3_desc_p1": "Nova Nut SRL a fost fondată în anul 2005, activitatea de bază fiind achiziția, prelucrarea și exportul nucilor în coajă și al miezului de nucă. Fabrica noastră este dotată cu echipament modern de prelucrare al nucii și este amplasată în zona centrală a Republicii Moldova la doar 15 km de capitala - Chișinău.",
+    "step3_desc_p2": "Personal calificat, experimentat, dezvoltare continuă, tehnologii avansate și moderne de procesare, uscare și ambalare, condiții sanitare ce corespund standartelor Uniunii Europene și al SUA, produs finit calitativ, toate acestea la un loc plasează întreprinderea noastră printre cele mai competitive întreprinderi din Europa Centrală din domeniu.",
+    "step3_desc_p3": "Nova Nut SRL oferă produse de calitate premium și este certificată organic începând cu anul 2006, conform urmatoarelor regulamente ecologice mondiale: UE, NOP - SUA, BioSuisse - Elveția, KRAV - Suedia și Naturland - Germania. Unitatea de procesare este certificată IFS Food 6.1 și HACCP din 2006, precum și Kosher - SUA.",
+    "step3_desc": "Nova Nut SRL a fost fondată în anul 2005, activitatea de bază fiind achiziția, prelucrarea și exportul nucilor în coajă și al miezului de nucă. Fabrica noastră este dotată cu echipament modern de prelucrare al nucii și este amplasată în zona centrală a Republicii Moldova la doar 15 km de capitala - Chișinău. Personal calificat, experimentat, dezvoltare continuă, tehnologii avansate și moderne de procesare, uscare și ambalare, condiții sanitare ce corespund standartelor Uniunii Europene și al SUA, produs finit calitativ, toate acestea la un loc plasează întreprinderea noastră printre cele mai competitive întreprinderi din Europa Centrală din domeniu. Nova Nut SRL oferă produse de calitate premium și este certificată organic începând cu anul 2006, conform urmatoarelor regulamente ecologice mondiale: UE, NOP - SUA, BioSuisse - Elveția, KRAV - Suedia și Naturland - Germania. Unitatea de procesare este certificată IFS Food 6.1 și HACCP din 2006, precum și Kosher - SUA.",
+    "cert_badge_organic": "Organic: UE • NOP (SUA) • BioSuisse • KRAV • Naturland",
+    "cert_badge_ifs": "Certificat IFS Food 6.1 & HACCP (din 2006)",
+    "cert_badge_kosher": "Certificare Kosher — SUA",
+    "cert_badge_location": "Fondat 2005 • Chișinău, Moldova",
+    "bullet1": "Certificată organic: UE, NOP - SUA, BioSuisse, KRAV & Naturland",
+    "bullet2": "Certificare IFS Food 6.1, HACCP & Kosher - SUA din 2006",
+    "bullet3": "Echipamente avansate de prelucrare, uscare și ambalare",
+    "bullet4": "Standarde sanitare UE & SUA, fabrică la 15 km de Chișinău",
     "contact_btn": "Contactează-ne",
     
     "indicator_step1": "Pasul 1: Calitate",
     "indicator_step2": "Pasul 2: Sustenabilitate",
-    "indicator_step3": "Despre NovaNut"
+    "indicator_step3": "Despre Noi"
   },
   "stats": {
     "stat1_number": "5000+ t",

@@ -44,18 +44,25 @@
     "step2_title": "Ethical Practices.\nZero Waste.",
     "step2_desc": "Our extraction process is fully sustainable. The shells are completely recycled for biomass energy, and every drop of water is reclaimed. We believe premium quality should not cost the earth.",
     
-    "step3_tag": "About NovaNut",
-    "step3_title": "Quality You Can Taste.\nPartnerships You Can Trust.",
-    "step3_desc": "With years of experience in walnut cultivation, processing and export, we deliver the finest walnut kernels to our global partners.",
-    "bullet1": "Carefully selected raw materials",
-    "bullet2": "Advanced processing & strict quality control",
-    "bullet3": "Sustainable & ethical practices",
-    "bullet4": "Reliable logistics & timely delivery",
+    "step3_tag": "About Us",
+    "step3_title": "Nova Nut LLC — Quality & Tradition",
+    "step3_desc_p1": "Nova Nut LLC was founded in 2005, with its core activity being the procurement, processing, and export of in-shell walnuts and walnut kernels. Our factory is equipped with modern walnut processing equipment and is located in the central region of the Republic of Moldova, just 15 km from the capital, Chisinau.",
+    "step3_desc_p2": "Qualified and experienced staff, continuous development, advanced and modern processing, drying and packaging technologies, sanitary conditions meeting European Union and US standards, and a high-quality finished product—all these combined place our company among the most competitive enterprises in Central Europe in this sector.",
+    "step3_desc_p3": "Nova Nut LLC offers premium quality products and has been certified organic since 2006, according to the following global ecological regulations: EU, NOP - USA, BioSuisse - Switzerland, KRAV - Sweden, and Naturland - Germany. The processing facility is certified IFS Food 6.1 and HACCP since 2006, as well as Kosher - USA.",
+    "step3_desc": "Nova Nut LLC was founded in 2005, with its core activity being the procurement, processing, and export of in-shell walnuts and walnut kernels. Our factory is equipped with modern walnut processing equipment and is located in the central region of the Republic of Moldova, just 15 km from the capital, Chisinau. Qualified and experienced staff, continuous development, advanced and modern processing, drying and packaging technologies, sanitary conditions meeting European Union and US standards, and a high-quality finished product—all these combined place our company among the most competitive enterprises in Central Europe in this sector. Nova Nut LLC offers premium quality products and has been certified organic since 2006, according to the following global ecological regulations: EU, NOP - USA, BioSuisse - Switzerland, KRAV - Sweden, and Naturland - Germany. The processing facility is certified IFS Food 6.1 and HACCP since 2006, as well as Kosher - USA.",
+    "cert_badge_organic": "Organic: EU • NOP (USA) • BioSuisse • KRAV • Naturland",
+    "cert_badge_ifs": "Certified IFS Food 6.1 & HACCP (since 2006)",
+    "cert_badge_kosher": "Kosher Certified — USA",
+    "cert_badge_location": "Founded 2005 • Chisinau, Moldova",
+    "bullet1": "Certified organic: EU, NOP - USA, BioSuisse, KRAV & Naturland",
+    "bullet2": "IFS Food 6.1, HACCP and Kosher USA certified since 2006",
+    "bullet3": "Advanced processing, drying and packaging equipment",
+    "bullet4": "EU & US sanitary standards, facility 15 km from Chisinau",
     "contact_btn": "Contact Us",
     
     "indicator_step1": "Step 1: Quality",
     "indicator_step2": "Step 2: Sustainability",
-    "indicator_step3": "About NovaNut"
+    "indicator_step3": "About Us"
   },
   "stats": {
     "stat1_number": "5000+",

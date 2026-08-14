@@ -335,7 +335,8 @@
 
 .storytelling-content {
   position: relative;
-  height: 400px; /* Gives enough height for the tallest content block */
+  min-height: 520px;
+  height: 540px;
   pointer-events: auto; /* Enable clicks on text/buttons */
   flex: 1;
 }
@@ -434,7 +435,7 @@
 .about-title {
   font-size: clamp(1.8rem, 3vw, var(--text-4xl));
   color: var(--color-primary-dark);
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .about-desc {
@@ -442,6 +443,56 @@
   color: var(--color-text-muted);
   line-height: 1.7;
   margin-bottom: var(--space-6);
+}
+
+.about-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.about-paragraphs .about-desc {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  margin-bottom: 0;
+  color: #4a544e;
+}
+
+.about-cert-badges {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.cert-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(26, 58, 42, 0.12);
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: all 200ms ease;
+  width: fit-content;
+}
+
+.cert-pill:hover {
+  background: rgba(255, 255, 255, 0.95);
+  border-color: var(--color-accent);
+  transform: translateX(3px);
+}
+
+.cert-pill-icon {
+  font-size: 14px;
+  line-height: 1;
 }
 
 .about-list {
@@ -816,6 +867,15 @@
 
   .hero-badge-number {
     font-size: var(--text-xl);
+  }
+
+  .storytelling-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .storytelling-content {
+    min-height: 580px;
+    height: auto;
   }
 
   .about .container {

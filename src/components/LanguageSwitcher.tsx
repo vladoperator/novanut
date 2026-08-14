@@ -12,15 +12,22 @@ export function LanguageSwitcher({ className }: { className?: string }) {
   const { i18n } = useTranslation();
   const current = (i18n.resolvedLanguage || i18n.language || "ro").slice(0, 2);
 
+  const handleSelectLanguage = (langCode: string) => {
+    i18n.changeLanguage(langCode);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("novanut_lang", langCode);
+    }
+  };
+
   return (
     <div
       className={cn(
-        "relative inline-flex items-center gap-1.5 rounded-full p-1.5 transition-all duration-300",
-        // Liquid glass container
-        "bg-white/45 dark:bg-black/20 backdrop-blur-xl saturate-180",
-        "border border-white/70 dark:border-white/20",
-        "shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.9),0_6px_20px_-2px_rgba(26,58,42,0.12),0_2px_6px_rgba(0,0,0,0.04)]",
-        "hover:border-white/90 hover:bg-white/55 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,0.95),0_8px_24px_-2px_rgba(26,58,42,0.16)]",
+        "relative inline-flex items-center gap-1.5 sm:gap-2 rounded-[10px] p-1.5 sm:p-2 transition-all duration-300",
+        // Sleek frosted glass container with crisp edges
+        "bg-white/65 dark:bg-black/30 backdrop-blur-xl saturate-180",
+        "border border-[#1a3a2a]/15 dark:border-white/20",
+        "shadow-[inset_0_1px_1.5px_rgba(255,255,255,0.95),0_6px_20px_-2px_rgba(26,58,42,0.12),0_2px_6px_rgba(0,0,0,0.04)]",
+        "hover:border-[#1a3a2a]/25 hover:bg-white/75 hover:shadow-[inset_0_1px_2px_rgba(255,255,255,1),0_8px_24px_-2px_rgba(26,58,42,0.16)]",
         className
       )}
       role="group"
@@ -32,45 +39,45 @@ export function LanguageSwitcher({ className }: { className?: string }) {
           <button
             key={l.code}
             type="button"
-            onClick={() => i18n.changeLanguage(l.code)}
+            onClick={() => handleSelectLanguage(l.code)}
             aria-pressed={active}
             className={cn(
-              "group relative z-10 flex cursor-pointer items-center justify-center gap-2 rounded-full px-4 py-2 text-xs sm:text-[13px] font-bold tracking-wider transition-all duration-300 select-none",
+              "group relative z-10 flex cursor-pointer items-center justify-center gap-2 rounded-[7px] px-4.5 py-2 sm:px-5 sm:py-2.5 text-xs sm:text-sm font-bold tracking-wider transition-all duration-300 select-none",
               active
                 ? "text-white"
-                : "text-[#4a554a] hover:text-[#1a3a2a] hover:bg-white/35 active:scale-95"
+                : "text-[#3c4a3e] hover:text-[#1a3a2a] hover:bg-black/[0.05] active:scale-95"
             )}
           >
             {active && (
               <motion.div
-                layoutId="active-liquid-pill"
+                layoutId="active-language-indicator"
                 className={cn(
-                  "absolute inset-0 -z-10 rounded-full",
-                  // Deep glossy liquid emerald pill with top specular reflection
-                  "bg-gradient-to-b from-[#24523a] via-[#1a3a2a] to-[#12281d]",
+                  "absolute inset-0 -z-10 rounded-[7px]",
+                  // Deep glossy emerald tab with top specular edge
+                  "bg-gradient-to-b from-[#24543c] via-[#1a3a2a] to-[#12281d]",
                   "border border-white/25",
-                  "shadow-[inset_0_1px_1px_rgba(255,255,255,0.45),0_4px_14px_rgba(18,40,29,0.35),0_1px_3px_rgba(0,0,0,0.15)]"
+                  "shadow-[inset_0_1px_1px_rgba(255,255,255,0.5),0_4px_14px_rgba(18,40,29,0.35),0_1px_3px_rgba(0,0,0,0.15)]"
                 )}
                 transition={{
                   type: "spring",
-                  stiffness: 420,
+                  stiffness: 440,
                   damping: 32,
-                  mass: 0.8,
+                  mass: 0.75,
                 }}
               />
             )}
             <span
               aria-hidden
-              className="text-base leading-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.12)] transition-transform duration-200 group-hover:scale-110"
+              className="text-base sm:text-lg leading-none drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)] transition-transform duration-200 group-hover:scale-110"
             >
               {l.flag}
             </span>
             <span
               className={cn(
-                "relative z-10 font-bold uppercase transition-colors duration-200",
+                "relative z-10 font-bold uppercase tracking-wider transition-colors duration-200",
                 active
-                  ? "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.35)]"
-                  : "text-[#3d4a3e]"
+                  ? "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.4)]"
+                  : "text-[#2e3d30]"
               )}
             >
               {l.label}

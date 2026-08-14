@@ -77,13 +77,6 @@ export default function StorytellingSection() {
     }
   };
 
-  const bulletPoints = [
-    t('story.bullet1'),
-    t('story.bullet2'),
-    t('story.bullet3'),
-    t('story.bullet4'),
-  ];
-
   const steps = [
     { index: 0, name: t('story.indicator_step1'), short: '01' },
     { index: 1, name: t('story.indicator_step2'), short: '02' },
@@ -144,25 +137,44 @@ export default function StorytellingSection() {
               </div>
 
               {/* ABOUT US */}
-              <div ref={aRef} id="about" className="story-block">
+              <div ref={aRef} id="about" className="story-block story-block-about">
                 <p className="label-upper about-label">{t('story.step3_tag')}</p>
                 <h2 className="heading-section about-title whitespace-pre-line">
                   {t('story.step3_title')}
                 </h2>
-                <p className="about-desc">
-                  {t('story.step3_desc')}
-                </p>
-                <ul className="about-list">
-                  {bulletPoints.map((point, i) => (
-                    <li key={i} className="about-list-item">
-                      <span className="check" aria-hidden="true">✓</span>
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-                <a href="#contact" className="btn btn-outline btn-arrow">
-                  {t('story.contact_btn')}
-                </a>
+                
+                <div className="about-paragraphs">
+                  <p className="about-desc">
+                    {t('story.step3_desc_p1')}
+                  </p>
+                  <p className="about-desc">
+                    {t('story.step3_desc_p2')}
+                  </p>
+                  <p className="about-desc">
+                    {t('story.step3_desc_p3')}
+                  </p>
+                </div>
+
+                <div className="about-cert-badges">
+                  <div className="cert-pill">
+                    <span className="cert-pill-icon">🌿</span>
+                    <span>{t('story.cert_badge_organic')}</span>
+                  </div>
+                  <div className="cert-pill">
+                    <span className="cert-pill-icon">🛡️</span>
+                    <span>{t('story.cert_badge_ifs')}</span>
+                  </div>
+                  <div className="cert-pill">
+                    <span className="cert-pill-icon">⭐</span>
+                    <span>{t('story.cert_badge_kosher')}</span>
+                  </div>
+                </div>
+
+                <div className="about-actions mt-5">
+                  <a href="#contact" className="btn btn-outline btn-arrow">
+                    {t('story.contact_btn')}
+                  </a>
+                </div>
               </div>
 
             </div>
