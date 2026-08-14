@@ -459,10 +459,32 @@
 }
 
 .about-paragraphs .about-desc {
-  font-size: 0.95rem;
-  line-height: 1.65;
+  font-size: 0.8125rem;
+  line-height: 1.5;
   margin-bottom: 0;
   color: #3d4a3e;
+}
+
+/* Specific styling for Step 3 About Us block */
+.story-block-about .about-label {
+  margin-bottom: var(--space-2);
+}
+
+.story-block-about .about-title {
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
+  margin-bottom: var(--space-3);
+  line-height: 1.25;
+}
+
+.story-block-about .about-paragraphs {
+  gap: 7px;
+  margin-bottom: var(--space-3);
+}
+
+.story-block-about .about-paragraphs .about-desc {
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  color: #4a584d;
 }
 
 .about-cert-badges {
@@ -470,25 +492,25 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin-top: var(--space-2);
-  margin-bottom: var(--space-5);
+  gap: 6px;
+  margin-top: 0;
+  margin-bottom: var(--space-3);
 }
 
 .cert-pill {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(26, 58, 42, 0.14);
-  border-radius: 8px;
-  font-size: 12px;
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(26, 58, 42, 0.12);
+  border-radius: 6px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--color-primary-dark);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
   transition: all 160ms ease;
   width: fit-content;
 }
@@ -500,8 +522,17 @@
 }
 
 .cert-pill-icon {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
+}
+
+.story-block-about .about-actions {
+  margin-top: var(--space-3);
+}
+
+.story-block-about .about-actions .btn {
+  padding: 8px 18px;
+  font-size: 11px;
 }
 
 .about-list {
