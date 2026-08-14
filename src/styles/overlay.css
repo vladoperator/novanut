@@ -335,8 +335,8 @@
 
 .storytelling-content {
   position: relative;
-  min-height: 520px;
-  height: 540px;
+  min-height: 420px;
+  height: 440px;
   pointer-events: auto; /* Enable clicks on text/buttons */
   flex: 1;
 }
@@ -429,69 +429,72 @@
 
 .about-label {
   color: var(--color-accent-dark);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
 }
 
 .about-title {
-  font-size: clamp(1.8rem, 3vw, var(--text-4xl));
+  font-size: clamp(1.4rem, 2.2vw, var(--text-2xl));
   color: var(--color-primary-dark);
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
 }
 
 .about-desc {
-  font-size: var(--text-base);
+  font-size: 0.85rem;
   color: var(--color-text-muted);
-  line-height: 1.7;
-  margin-bottom: var(--space-6);
+  line-height: 1.55;
+  margin-bottom: var(--space-4);
 }
 
 .about-paragraphs {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  margin-bottom: var(--space-5);
+  gap: 6px;
+  margin-bottom: var(--space-3);
 }
 
 .about-paragraphs .about-desc {
-  font-size: 0.925rem;
-  line-height: 1.65;
+  font-size: 0.825rem;
+  line-height: 1.5;
   margin-bottom: 0;
   color: #4a544e;
 }
 
 .about-cert-badges {
   display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-  margin-bottom: var(--space-5);
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: var(--space-3);
 }
 
 .cert-pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  gap: 5px;
+  padding: 3px 8px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(26, 58, 42, 0.12);
-  border-radius: 8px;
-  font-size: 12px;
+  border-radius: 6px;
+  font-size: 11px;
   font-weight: 600;
   color: var(--color-primary-dark);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
-  transition: all 200ms ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+  transition: all 160ms ease;
   width: fit-content;
 }
 
 .cert-pill:hover {
   background: rgba(255, 255, 255, 0.95);
   border-color: var(--color-accent);
-  transform: translateX(3px);
+  transform: translateY(-1px);
 }
 
 .cert-pill-icon {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1;
 }
 

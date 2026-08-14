@@ -170,8 +170,8 @@ export default function StorytellingSection() {
                   </div>
                 </div>
 
-                <div className="about-actions mt-5">
-                  <a href="#contact" className="btn btn-outline btn-arrow">
+                <div className="about-actions mt-3">
+                  <a href="#contact" className="btn btn-outline btn-arrow text-xs py-2 px-5">
                     {t('story.contact_btn')}
                   </a>
                 </div>
