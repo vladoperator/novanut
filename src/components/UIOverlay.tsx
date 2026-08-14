@@ -3,7 +3,6 @@ import HeroSection from './HeroSection';
 import FeaturesBar from './FeaturesBar';
 import StorytellingSection from './StorytellingSection';
 import StatsBar from './StatsBar';
-import ProductsSection from './ProductsSection';
 import CTABanner from './CTABanner';
 import Footer from './Footer';
 import useScrollAnimations from '../hooks/useScrollAnimations';
@@ -22,7 +21,6 @@ export default function UIOverlay() {
         <FeaturesBar />
         <StorytellingSection />
         <StatsBar />
-        <ProductsSection />
         <CTABanner />
       </main>
       <Footer />

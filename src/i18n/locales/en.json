@@ -1,11 +1,11 @@
 {
   "nav": {
     "home": "Home",
-    "story": "Story",
+    "story": "About Us",
     "quality": "Quality",
-    "sustainability": "Sustainability",
+    "certifications": "Certifications",
     "about": "About Us",
-    "products": "Products",
+    "products": "Our Products",
     "contact": "Contact",
     "quote": "Request a Quote",
     "language": "Language"
@@ -154,6 +154,31 @@
     "b10": "Increases daily vitality, stamina, and energy",
     "b11": "Helps strengthen bone density and mineral retention",
     "b12": "Promotes longevity and healthy cellular aging"
+  },
+  "certifications_page": {
+    "tag": "Global Standards & Quality",
+    "title": "Certifications",
+    "subtitle": "Food Safety, International Standards & Organic Certification",
+    "p1": "Nova Nut LLC is a growing company that prioritizes food safety, finished product quality, and exceptional service to its partners. Customer satisfaction is our highest prerogative. This requires a professional and continuous approach, essential for the company's long-term success. The quality and safety of our products are guaranteed by frequent international audits and certifications, as well as regular laboratory analysis of finished products and raw materials in EU-accredited independent laboratories.",
+    "p2": "Nova Nut LLC proudly informs our clients that both our operations and products are certified organic in accordance with EU Regulations, BioSuisse - Switzerland, inspected and certified according to KRAV - Sweden standards (Section 16.4 Additional Social Responsibility Requirements), Naturland - Germany, and the USDA National Organic Program since 2006. Our production unit is certified IFS Food 6.1 and HACCP by DQS CDS GmbH, Germany, as well as Kosher - USA.",
+    "quote_banner": "We do not focus on a single-day business; we aspire to fruitful and long-lasting cooperation.",
+    "back_home": "Back to Home Page",
+    "cert_eu": "EU Organic Certified",
+    "cert_eu_desc": "Compliant with European organic regulations (EC 834/2007 & 889/2008).",
+    "cert_usda": "USDA NOP Organic (USA)",
+    "cert_usda_desc": "National Organic Program – United States Department of Agriculture standard since 2006.",
+    "cert_biosuisse": "BioSuisse (Switzerland)",
+    "cert_biosuisse_desc": "The most stringent Swiss organic standard for sustainable agriculture and traceability.",
+    "cert_krav": "KRAV (Sweden)",
+    "cert_krav_desc": "Swedish organic standard including Section 16.4 Social Responsibility requirements.",
+    "cert_naturland": "Naturland (Germany)",
+    "cert_naturland_desc": "Premium German organic certification upholding high environmental and social ethics.",
+    "cert_ifs": "IFS Food 6.1 (DQS Germany)",
+    "cert_ifs_desc": "GFSI-recognized international standard for food processing safety and quality audit.",
+    "cert_haccp": "HACCP & ISO",
+    "cert_haccp_desc": "Rigorous Hazard Analysis and Critical Control Points management system since 2006.",
+    "cert_kosher": "Kosher Certified (USA)",
+    "cert_kosher_desc": "Full compliance with strict Kosher dietary purity and processing standards."
   },
   "contacts_page": {
     "tag": "Contact & Global Partnerships",

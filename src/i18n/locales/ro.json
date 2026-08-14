@@ -1,9 +1,9 @@
 {
   "nav": {
     "home": "Acasă",
-    "story": "Poveste",
+    "story": "Despre Noi",
     "quality": "Calitate",
-    "sustainability": "Sustenabilitate",
+    "certifications": "Certificate",
     "about": "Despre Noi",
     "products": "Produse",
     "contact": "Contact",
@@ -154,6 +154,31 @@
     "b10": "Crește vitalitatea și energia zilnică",
     "b11": "Ajută la consolidarea sistemului osos",
     "b12": "Sprijină longevitatea și îmbătrânirea sănătoasă"
+  },
+  "certifications_page": {
+    "tag": "Standarde Globale & Calitate",
+    "title": "Certificate",
+    "subtitle": "Siguranță Alimentară, Standarde Internaționale și Certificare Organică",
+    "p1": "Nova Nut SRL este o companie în continuă dezvoltare care își îndreaptă atenția și importanța asupra siguranței alimentare, calității produsului finit și serviciilor oferite partenerilor săi. Satisfacerea consumatorului este prerogativa companiei. Acest lucru necesită o abordare profesională și continuă, care este absolut esențială pentru succesul companiei. Calitatea și siguranța produselor sunt garantate de audituri și certificări internaționale frecvente, precum și de rezultatele analizelor produselor finite și al materiei prime utilizate în cadrul laboratoarelor externe acreditate în UE.",
+    "p2": "Compania Nova Nut SRL informează cu mândrie clienții noștri că atât activitatea noastră cât și produsele sunt certificate organic în conformitate cu Regulamentele UE, BioSuisse - Elveția, inspectat și certificat conform standardelor KRAV - Suedia (Secțiunea 16.4 Cerințe suplimentare pentru responsabilitatea socială), Naturland - Germania și Programul Organic Național al USDA din 2006. Unitatea de producere a companiei este certificată IFS Food 6.1 și HACCP de către DQS CDS GmbH, Germania și Kosher - SUA.",
+    "quote_banner": "Nu ne axăm pentru o afacere de o zi, aspirăm pentru o cooperare fructuoasă și de lungă durată.",
+    "back_home": "Înapoi la Pagina Principală",
+    "cert_eu": "Certificare Organică UE",
+    "cert_eu_desc": "Conform regulamentelor europene de agricultură ecologică (EC 834/2007 & 889/2008).",
+    "cert_usda": "USDA NOP Organic (SUA)",
+    "cert_usda_desc": "National Organic Program – Standardul ecologic al Statelor Unite ale Americii din 2006.",
+    "cert_biosuisse": "BioSuisse (Elveția)",
+    "cert_biosuisse_desc": "Cel mai exigent standard ecologic elvețian pentru agricultură durabilă și trasabilitate.",
+    "cert_krav": "KRAV (Suedia)",
+    "cert_krav_desc": "Standarde suedeze de bio-producție și responsabilitate socială (Secțiunea 16.4).",
+    "cert_naturland": "Naturland (Germania)",
+    "cert_naturland_desc": "Certificare ecologică germană premium cu standarde etice și sociale ridicate.",
+    "cert_ifs": "IFS Food 6.1 (DQS Germania)",
+    "cert_ifs_desc": "Standard global recunoscut GFSI pentru siguranță și integritate alimentară.",
+    "cert_haccp": "HACCP & ISO",
+    "cert_haccp_desc": "Sistem riguros de analiză a pericolelor și puncte critice de control din 2006.",
+    "cert_kosher": "Kosher Certified (SUA)",
+    "cert_kosher_desc": "Conformitate deplină cu cerințele stricte de puritate și preparare Kosher."
   },
   "contacts_page": {
     "tag": "Contact & Parteneriate",

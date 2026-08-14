@@ -1011,8 +1011,21 @@
 }
 
 .products-hero-card,
-.contact-hero-card {
+.contact-hero-card,
+.certifications-hero-card {
   box-shadow: 0 20px 40px -15px rgba(26, 58, 42, 0.3);
+}
+
+.cert-card {
+  transition: transform 250ms var(--ease-out), box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+}
+
+.official-cert-banner-card img {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.05));
 }
 
 .quote-banner-card {

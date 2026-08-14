@@ -31,9 +31,8 @@ export default function Navbar() {
         <ul className="nav-links hidden lg:flex">
           <li><a href="#/" className="nav-link">{t('nav.home') || 'Acasă'}</a></li>
           <li><a href="#/about" className="nav-link">{t('nav.story') || 'Despre Noi'}</a></li>
-          <li><a href="#/products" className="nav-link">{t('nav.products') || 'Produse'}</a></li>
-          <li><a href="#/quality" className="nav-link">{t('nav.quality') || 'Calitate'}</a></li>
-          <li><a href="#/sustainability" className="nav-link">{t('nav.sustainability') || 'Sustenabilitate'}</a></li>
+          <li><a href="#/products" className="nav-link">{t('nav.products') || 'Produsele Noastre'}</a></li>
+          <li><a href="#/certifications" className="nav-link">{t('nav.certifications') || 'Certificate'}</a></li>
           <li><a href="#/contact" className="nav-link">{t('nav.contact') || 'Contact'}</a></li>
         </ul>
 

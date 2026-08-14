@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 interface ContactPageProps {
   initialProductId?: string;
-  onNavigate?: (page: 'home' | 'products' | 'contact') => void;
+  onNavigate?: (page: 'home' | 'products' | 'contact' | 'certifications') => void;
 }
 
 export default function ContactPage({ initialProductId, onNavigate }: ContactPageProps) {

@@ -4,9 +4,10 @@ import Canvas3D from './components/Canvas3D';
 import UIOverlay from './components/UIOverlay';
 import ProductsPage from './components/ProductsPage';
 import ContactPage from './components/ContactPage';
+import CertificationsPage from './components/CertificationsPage';
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'products' | 'contact'>('home');
+  const [currentPage, setCurrentPage] = useState<'home' | 'products' | 'contact' | 'certifications'>('home');
   const [selectedProductId, setSelectedProductId] = useState<string | undefined>();
 
   useEffect(() => {
@@ -14,6 +15,9 @@ export default function App() {
       const hash = window.location.hash || '#/';
       if (hash.startsWith('#/products')) {
         setCurrentPage('products');
+        window.scrollTo({ top: 0, behavior: 'instant' });
+      } else if (hash.startsWith('#/certifications')) {
+        setCurrentPage('certifications');
         window.scrollTo({ top: 0, behavior: 'instant' });
       } else if (hash.startsWith('#/contact')) {
         setCurrentPage('contact');
@@ -41,10 +45,12 @@ export default function App() {
     return () => window.removeEventListener('hashchange', handleRoute);
   }, []);
 
-  const handleNavigate = (page: 'home' | 'products' | 'contact', productId?: string) => {
+  const handleNavigate = (page: 'home' | 'products' | 'contact' | 'certifications', productId?: string) => {
     setSelectedProductId(productId);
     if (page === 'products') {
       window.location.hash = '#/products';
+    } else if (page === 'certifications') {
+      window.location.hash = '#/certifications';
     } else if (page === 'contact') {
       window.location.hash = productId ? `#/contact?product=${productId}` : '#/contact';
     } else {
@@ -54,6 +60,10 @@ export default function App() {
 
   if (currentPage === 'products') {
     return <ProductsPage onNavigate={handleNavigate} />;
+  }
+
+  if (currentPage === 'certifications') {
+    return <CertificationsPage onNavigate={handleNavigate} />;
   }
 
   if (currentPage === 'contact') {

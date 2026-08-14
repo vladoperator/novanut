@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 
 interface ProductsPageProps {
-  onNavigate?: (page: 'home' | 'products' | 'contact', productId?: string) => void;
+  onNavigate?: (page: 'home' | 'products' | 'contact' | 'certifications', productId?: string) => void;
 }
 
 export default function ProductsPage({ onNavigate }: ProductsPageProps) {

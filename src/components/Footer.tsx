@@ -53,7 +53,7 @@ export default function Footer() {
           <div>
             <h4 className="footer-col-title">{t('footer.col_support')}</h4>
             <a href="#/quality" className="footer-link">{t('footer.food_safety')}</a>
-            <a href="#/about" className="footer-link">{t('footer.certifications_link')}</a>
+            <a href="#/certifications" className="footer-link">{t('footer.certifications_link')}</a>
             <a href="#/contact" className="footer-link">{t('footer.faq')}</a>
             <a href="#/contact" className="footer-link">{t('footer.contact')}</a>
           </div>
@@ -63,9 +63,9 @@ export default function Footer() {
             <h4 className="footer-col-title">{t('footer.col_certifications')}</h4>
             <div className="footer-certs">
               {certifications.map((cert) => (
-                <div key={cert.name} className="footer-cert-badge" aria-label={cert.name}>
+                <a key={cert.name} href="#/certifications" className="footer-cert-badge hover:border-[#c8a960] transition-colors cursor-pointer" aria-label={cert.name}>
                   {cert.label}
-                </div>
+                </a>
               ))}
             </div>
             <h4 className="footer-col-title" style={{ marginTop: '1.5rem' }}>{t('footer.col_follow')}</h4>
