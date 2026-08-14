@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next';
+import { COMPANY_CONTACT } from '@/data/products';
 
 export default function CTABanner() {
   const { t } = useTranslation();
@@ -9,20 +10,23 @@ export default function CTABanner() {
         <div className="cta-content">
           <h2>{t('cta.title')}</h2>
           <p>{t('cta.subtitle')}</p>
+          <p className="text-xs text-white/70 mt-2 font-mono">
+            📍 {COMPANY_CONTACT.address}
+          </p>
         </div>
 
         <div className="cta-actions">
-          <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.875rem', maxWidth: 260 }}>
+          <p style={{ color: 'rgba(255,255,255,0.85)', fontSize: '0.875rem', maxWidth: 280 }}>
             {t('cta.desc')}
           </p>
-          <a href="mailto:office@novanutexport.com" className="btn btn-accent btn-arrow">
-            {t('cta.btn')}
+          <a href="#/contact" className="btn btn-accent btn-arrow text-xs font-bold tracking-wider">
+            {t('contacts_page.title') || 'Pagina de Contact'} & {t('cta.btn')}
           </a>
         </div>
 
         <div className="cta-contact">
-          <a href="tel:+40745123456">+40 745 123 456</a>
-          <a href="mailto:office@novanutexport.com">office@novanutexport.com</a>
+          <a href={`tel:${COMPANY_CONTACT.phoneClean}`}>{COMPANY_CONTACT.phone}</a>
+          <a href={`mailto:${COMPANY_CONTACT.email2}`}>{COMPANY_CONTACT.email2}</a>
         </div>
       </div>
     </section>

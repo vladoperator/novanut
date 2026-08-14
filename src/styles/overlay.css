@@ -996,3 +996,48 @@
     transition: none;
   }
 }
+
+/* ===== Dedicated Pages (Products & Contact) ===== */
+.page-wrapper {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper main {
+  flex: 1;
+}
+
+.products-hero-card,
+.contact-hero-card {
+  box-shadow: 0 20px 40px -15px rgba(26, 58, 42, 0.3);
+}
+
+.quote-banner-card {
+  position: relative;
+  background: linear-gradient(135deg, rgba(240, 234, 216, 0.9), rgba(250, 246, 238, 0.95));
+}
+
+.benefit-card {
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-3px);
+}
+
+.product-catalog-card {
+  transition: transform 250ms var(--ease-out), box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.product-catalog-card:hover {
+  transform: translateY(-6px);
+}
+
+.map-container iframe {
+  display: block;
+  width: 100%;
+}
+

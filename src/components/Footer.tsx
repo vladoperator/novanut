@@ -3,25 +3,6 @@ import { useTranslation } from 'react-i18next';
 export default function Footer() {
   const { t } = useTranslation();
 
-  const companyLinks = [
-    t('footer.about_us'),
-    t('footer.our_process'),
-    t('footer.sustainability'),
-    t('footer.careers'),
-  ];
-  const productLinks = [
-    t('footer.walnut_kernels'),
-    t('footer.walnut_meal'),
-    t('footer.packaging'),
-    t('footer.catalog'),
-  ];
-  const supportLinks = [
-    t('footer.food_safety'),
-    t('footer.certifications_link'),
-    t('footer.faq'),
-    t('footer.contact'),
-  ];
-
   const certifications = [
     { name: 'HACCP', label: 'HACCP' },
     { name: 'ISO 22000', label: 'ISO\n22000' },
@@ -53,25 +34,28 @@ export default function Footer() {
           {/* Company */}
           <div>
             <h4 className="footer-col-title">{t('footer.col_company')}</h4>
-            {companyLinks.map((link) => (
-              <a key={link} href="#about" className="footer-link">{link}</a>
-            ))}
+            <a href="#/about" className="footer-link">{t('footer.about_us')}</a>
+            <a href="#/quality" className="footer-link">{t('footer.our_process')}</a>
+            <a href="#/sustainability" className="footer-link">{t('footer.sustainability')}</a>
+            <a href="#/contact" className="footer-link">{t('footer.careers')}</a>
           </div>
 
           {/* Products */}
           <div>
             <h4 className="footer-col-title">{t('footer.col_products')}</h4>
-            {productLinks.map((link) => (
-              <a key={link} href="#products" className="footer-link">{link}</a>
-            ))}
+            <a href="#/products" className="footer-link">{t('footer.walnut_kernels')}</a>
+            <a href="#/products" className="footer-link">{t('footer.walnut_meal')}</a>
+            <a href="#/products" className="footer-link">{t('footer.packaging')}</a>
+            <a href="#/products" className="footer-link">{t('footer.catalog')}</a>
           </div>
 
           {/* Support */}
           <div>
             <h4 className="footer-col-title">{t('footer.col_support')}</h4>
-            {supportLinks.map((link) => (
-              <a key={link} href="#contact" className="footer-link">{link}</a>
-            ))}
+            <a href="#/quality" className="footer-link">{t('footer.food_safety')}</a>
+            <a href="#/about" className="footer-link">{t('footer.certifications_link')}</a>
+            <a href="#/contact" className="footer-link">{t('footer.faq')}</a>
+            <a href="#/contact" className="footer-link">{t('footer.contact')}</a>
           </div>
 
           {/* Certifications & Social */}

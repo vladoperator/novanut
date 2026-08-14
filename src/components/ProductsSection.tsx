@@ -1,35 +1,11 @@
 import { useTranslation } from 'react-i18next';
+import { PRODUCTS } from '@/data/products';
 
 export default function ProductsSection() {
   const { t } = useTranslation();
 
-  const products = [
-    {
-      emoji: '🥜',
-      name: t('products.p1_name'),
-      desc: t('products.p1_desc'),
-    },
-    {
-      emoji: '✨',
-      name: t('products.p2_name'),
-      desc: t('products.p2_desc'),
-    },
-    {
-      emoji: '🔶',
-      name: t('products.p3_name'),
-      desc: t('products.p3_desc'),
-    },
-    {
-      emoji: '🫘',
-      name: t('products.p4_name'),
-      desc: t('products.p4_desc'),
-    },
-    {
-      emoji: '🥣',
-      name: t('products.p5_name'),
-      desc: t('products.p5_desc'),
-    },
-  ];
+  // Show top featured products on homepage
+  const featuredProducts = PRODUCTS.slice(0, 6);
 
   return (
     <section className="products" id="products" aria-labelledby="products-title">
@@ -42,23 +18,43 @@ export default function ProductsSection() {
               <em>{t('products.title_sub')}</em>
             </h2>
           </div>
-          <a href="#products" className="btn btn-outline btn-arrow">
-            {t('products.view_all')}
+          <a href="#/products" className="btn btn-outline btn-arrow">
+            {t('products_catalog.page_tag') || 'Vezi Toate Cele 12 Produse'} (12)
           </a>
         </div>
 
         <div className="products-grid">
-          {products.map((product, i) => (
-            <div key={i} className="product-card anim-hidden-scale" style={{ transitionDelay: `${i * 80}ms` }}>
-              <div className="product-image">
-                <span style={{ fontSize: '3rem' }} aria-hidden="true">{product.emoji}</span>
+          {featuredProducts.map((product, i) => (
+            <a
+              key={product.id}
+              href="#/products"
+              className="product-card anim-hidden-scale block group cursor-pointer"
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <div className="product-image relative overflow-hidden bg-[#faf6ee]">
+                <img
+                  src={product.image}
+                  alt={t(product.nameKey)}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
               </div>
-              <div className="product-info">
-                <h3 className="product-name">{product.name}</h3>
-                <p className="product-desc">{product.desc}</p>
+              <div className="product-info p-4">
+                <h3 className="product-name font-serif font-bold text-sm text-[#1a3a2a] group-hover:text-[#a88b40] transition-colors">
+                  {t(product.nameKey)}
+                </h3>
+                <p className="product-desc text-xs text-[#6b6b5e] line-clamp-2 mt-1">
+                  {t(product.descKey)}
+                </p>
               </div>
-            </div>
+            </a>
           ))}
+        </div>
+
+        <div className="text-center mt-10">
+          <a href="#/products" className="btn btn-primary btn-arrow px-8 py-3.5 text-xs font-bold tracking-wider">
+            {t('products_catalog.page_tag') || 'Explorează Catalogul Complet'} (12 Produse)
+          </a>
         </div>
       </div>
     </section>
